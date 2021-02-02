@@ -1,0 +1,35 @@
+train_network: 'segdec'
+epochs: 10000
+image_h_w_c: [704, 256, 1]
+mask_shape: [1, 88, 32, 1]
+mask_resize_h_w:
+feature_shape: [1, 88, 32, 1024]
+num_class: 2
+num_shuffle: 500
+num_tensorboard_valid_image: 1
+num_tensorboard_train_image: 1
+num_tensorboard_step: 10
+dataset_path: '/tf/dataset'
+lr: 0.0001
+optimizer: 'sgd'
+pretrained_segnet:
+pretrained_decnet:
+rot: False
+flip: True
+brightness: True
+weight: 2.0
+save_model_per_epoch: 3
+learning_name: 'test_dec_0922_train_v9_gpu1'
+small_data: True
+early_stop_train: False
+early_stop_valid: True
+early_stop_patience: 3
+early_stop_target_loss: 0.001
+
+saved_model_path: '/tf/saved_model'
+docker_image: 'yodj/dlt'
+name: 'decnet_0922_train_v9_gpu1'
+model_path: 'tf_2/object_detection/defect_detection/model'
+gpu: 0
+batch_size: 1
+checkpoint_interval: 2

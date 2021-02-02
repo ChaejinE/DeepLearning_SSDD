@@ -1,0 +1,3 @@
+segnet_h5_path: '/Users/hyeseong/virtualenv/yodj_models/yodj_models/tf_2/object_detection/defect_detection/model/ssdd_lens_tube_0728_v3_epoch_6.h5'
+test_dir: '/Users/hyeseong/datasets/private/lens_tube/lens_tube_0728/lens_tube_0728_v3/test'
+resize_hw: [1408, 512]

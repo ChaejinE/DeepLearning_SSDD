@@ -1,0 +1,32 @@
+learning_name: test
+train_network: dec
+
+dataset_path: /tmp/data
+
+image_h_w_c: [704, 256, 1]
+mask_shape: [1, 88, 32, 1]
+feature_shape: [1, 88, 32, 1024]
+
+num_class: 2
+num_shuffle: 500
+rot: False
+flip: True
+brightness: True
+small_data: False
+
+epochs: 10000
+batch_size: 2
+lr: 0.001
+optimizer: sgd
+weight: 1.5
+early_stop: True
+early_stop_patience: 5
+early_stop_target_grad: 0.0001
+
+saved_model_path: /tmp/save
+save_model_per_epoch: 3
+num_tensorboard_images: 1
+
+pretrained_segnet: /tmp/save/metafiles/2020-11-17T20:50:54_test_seg_epoch_0.h5
+pretrained_decnet:
+
