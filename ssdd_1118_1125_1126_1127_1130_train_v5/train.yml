@@ -1,0 +1,31 @@
+learning_name: ssdd_1118_1125_1126_1127_1130_train_v5_gpu5
+train_network: sd
+
+dataset_path: /tf/dataset
+
+image_h_w_c: [704, 256, 1]
+mask_shape: [1, 88, 32, 1]
+feature_shape: [1, 88, 32, 1024]
+
+num_class: 2
+num_shuffle: 500
+rot: False
+flip: True
+brightness: True
+small_data: False
+
+epochs: 10000
+batch_size: 1
+lr: 0.0001
+optimizer: sgd
+weight: 2.0
+early_stop: True
+early_stop_patience: 3
+early_stop_target_grad: 0.00001
+
+saved_model_path: /tf/saved_model
+save_model_per_epoch: 1
+num_tensorboard_images: 50
+
+pretrained_segnet: 
+pretrained_decnet:
